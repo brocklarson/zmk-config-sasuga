@@ -1,0 +1,11 @@
+file_format: "1"
+id: sasuga
+name: Sasuga
+type: shield
+url: https://github.com/brocklarson/zmk-config-sasuga
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - sasuga_left
+  - sasuga_right
