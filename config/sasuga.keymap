@@ -13,6 +13,7 @@
 
  #define DEFAULT 0
  #define RSE 1
+ #define LWR 2
 
 
 / {
@@ -24,11 +25,9 @@
                      &kp N1   &kp N2   &kp N3    &kp N4  &kp N5   &kp ESC                                                                         &kp GRAVE &kp N6  &kp N7  &kp N8    &kp N9     &kp N0
                      &kp Q    &kp W    &kp E     &kp R   &kp T    &kp HOME                                                                        &kp END   &kp Y   &kp U   &kp I     &kp O      &kp P
                      &kp A    &kp S    &kp D     &kp F   &kp G    &trans   &kp DEL      &kp LCTRL   &kp LALT        &trans    &kp TAB   &kp BSPC  &kp CAPS  &kp J   &kp K   &kp L     &kp SEMI   &kp COLON
-                     &kp Z    &kp X    &kp C     &kp V   &kp B             &kp SPACE    &kp LGUI    &kp RCTRL       &mo RSE   &kp RSHFT &kp RET             &kp N   &kp M   &kp COMMA &kp DOT    &kp QMARK
+                     &kp Z    &kp X    &kp C     &kp V   &kp B             &kp SPACE    &kp LGUI    &mo LWR         &mo RSE   &kp RSHFT &kp RET             &kp N   &kp M   &kp COMMA &kp DOT    &kp QMARK
                      >;
               };
-
-
 
               raise_layer {                     
                      bindings = <
@@ -36,6 +35,15 @@
                      &trans   &trans    &trans   &trans   &trans  &trans                                                                   &trans  &kp K_VOL_UP &trans   &trans    &trans  &trans
                      &trans   &trans    &trans   &trans   &trans  &trans   &trans   &trans   &trans               &trans  &trans   &trans  &trans  &kp K_VOL_DN &kp UP   &trans    &trans  &trans
                      &trans   &trans    &trans   &trans   &trans           &trans   &trans   &trans               &trans  &trans   &trans          &kp LEFT     &kp DOWN &kp RIGHT &trans  &trans
+                     >;
+              };
+
+              lower_layer {                     
+                     bindings = <
+                     &kp F1   &kp F2    &kp F3   &kp F4   &kp F5   &kp F6                                                                   &kp F7  &kp K8   &kp F9   &kp F10  &kp F11 &kp F12
+                     &trans   &trans    &trans   &kp LBKT &kp RBKT &trans                                                                   &trans  &trans   &trans   &trans   &trans  &trans
+                     &trans   &kp LT    &kp GT   &kp LPAR &kp RPAR &trans   &trans   &trans   &trans               &trans  &trans   &trans  &trans  &kp QT   &kp APOS &trans   &trans  &trans
+                     &trans   &trans    &trans   &kp LBRC &kp RBRC          &trans   &trans   &trans               &trans  &trans   &trans          &kp FSLH &kp BSLH &trans   &trans  &trans
                      >;
               };
        };
